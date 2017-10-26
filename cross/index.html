@@ -99,6 +99,23 @@
                 });
 
                 crossPropertyOutline.setMap(map);
+
+                var twoTrackRoadCoords = [{
+                        lat: 45.599636,
+                        lng: -93.636317
+                    },
+                    {
+                        lat: 45.599962,
+                        lng: -93.636770
+                    }
+                ];
+                var twoTrackRoadPath = new google.maps.Polyline({
+                    path: twoTrackRoadCoords,
+                    geodesic: true,
+                    strokeColor: '#FF0000',
+                    strokeOpacity: 1.0,
+                    strokeWeight: 2
+                });
             }
 
             function handleLocationError(browserHasGeolocation, infoWindow, pos) {
