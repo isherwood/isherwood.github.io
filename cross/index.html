@@ -45,7 +45,7 @@
 
                 setInterval(function() {
                     setUserPosition();
-                }, 3000);
+                }, 10000);
 
                 setInterval(function() {
                     dropBreadcrumb();
@@ -77,8 +77,8 @@
                 var crossPropertyOutline = new google.maps.Polygon({
                     paths: crossPropertyCoords,
                     strokeColor: '#ffffff',
-                    strokeOpacity: 0.8,
-                    strokeWeight: 1,
+                    strokeOpacity: 0.5,
+                    strokeWeight: 2,
                     fillColor: '#ffffff',
                     fillOpacity: 0.05
                 });
@@ -86,56 +86,129 @@
                 crossPropertyOutline.setMap(map);
 
                 var twoTrackRoadCoords = [{
-                        lat: 45.599615,
-                        lng: -93.636313
-                    },
-                    {
-                        lat: 45.599962,
-                        lng: -93.636770
-                    },
-                    {
-                        lat: 45.600031,
-                        lng: -93.636971
-                    },
-                    {
-                        lat: 45.600074,
-                        lng: -93.637167
-                    },
-                    {
-                        lat: 45.600093,
-                        lng: -93.637340
-                    },
-                    {
-                        lat: 45.600066,
-                        lng: -93.637635
-                    },
-                    {
-                        lat: 45.599999,
-                        lng: -93.637909
-                    },
-                    {
-                        lat: 45.599643,
-                        lng: -93.638421
-                    },
-                    {
-                        lat: 45.599422,
-                        lng: -93.638785
-                    },
-                    {
-                        lat: 45.599330,
-                        lng: -93.638860
-                    }
-                ];
+                    lat: 45.599615,
+                    lng: -93.636313
+                }, {
+                    lat: 45.599962,
+                    lng: -93.636770
+                }, {
+                    lat: 45.600031,
+                    lng: -93.636971
+                }, {
+                    lat: 45.600074,
+                    lng: -93.637167
+                }, {
+                    lat: 45.600093,
+                    lng: -93.637340
+                }, {
+                    lat: 45.600066,
+                    lng: -93.637635
+                }, {
+                    lat: 45.599999,
+                    lng: -93.637909
+                }, {
+                    lat: 45.599643,
+                    lng: -93.638421
+                }, {
+                    lat: 45.599422,
+                    lng: -93.638785
+                }, {
+                    lat: 45.599330,
+                    lng: -93.638860
+                }];
+
+                var twoTrackRoadSymbol = {
+                    path: 'M 0,-1 0,1',
+                    strokeOpacity: .75,
+                    strokeColor: '#ffd547',
+                    scale: 4
+                };
 
                 var twoTrackRoadPath = new google.maps.Polyline({
                     path: twoTrackRoadCoords,
-                    geodesic: true,
-                    strokeColor: '#f4d742',
-                    strokeOpacity: 0.5,
-                    strokeWeight: 8
+                    icons: [{
+                        icon: twoTrackRoadSymbol,
+                        offset: '0',
+                        repeat: '20px'
+                    }],
+                    strokeOpacity: 0
                 });
 
                 twoTrackRoadPath.setMap(map);
+
+                var treeStands = [{
+                    hunter: 'Art',
+                    pos: {
+                        lat: 45.598507,
+                        lng: -93.638822
+                    }
+                }, {
+                    hunter: 'Art',
+                    pos: {
+                        lat: 45.596714,
+                        lng: -93.639099
+                    }
+                }, {
+                    hunter: 'Art',
+                    pos: {
+                        lat: 45.597295,
+                        lng: -93.637415
+                    }
+                }, {
+                    hunter: 'Matt',
+                    pos: {
+                        lat: 45.598656,
+                        lng: -93.636763
+                    }
+                }, {
+                    hunter: 'Clint',
+                    pos: {
+                        lat: 45.599802,
+                        lng: -93.638951
+                    }
+                }];
+
+                treeStands.forEach(function(i) {
+                    stand = new google.maps.Marker({
+                        position: i.pos,
+                        map: map,
+                        icon: 'images/tree-stand-icon-blue.png'
+                    });
+                });
+
+                var cameras = [{
+                    // north-central woods
+                    pos: {
+                        lat: 45.599588,
+                        lng: -93.639768
+                    }
+                }, {
+                    // northwest woods
+                    pos: {
+                        lat: 45.598567,
+                        lng: -93.640062
+                    }
+                }, {
+                    // southwest meadow
+                    pos: {
+                        lat: 45.596820,
+                        lng: -93.639388
+                    }
+                }, {
+                    // south-central river
+                    pos: {
+                        lat: 45.597254,
+                        lng: -93.637563
+                    }
+                }];
+
+                cameras.forEach(function(i) {
+                    stand = new google.maps.Marker({
+                        position: i.pos,
+                        map: map,
+                        icon: 'images/camera-icon-green.png'
+                    });
+                });
             }
 
             function setUserPosition() {
@@ -154,9 +227,10 @@
                         setTimeout(function() {
                             userMarker = new google.maps.Marker({
                                 position: pos,
-                                map: map
+                                map: map,
+                                icon: 'images/bowhunter-icon-orange.png'
                             });
-                        }, 250);
+                        }, 150);
 
                     }, function() {
                         handleLocationError(true, infoWindow, map.getCenter());
@@ -179,7 +253,7 @@
                         var crumb = new google.maps.Marker({
                             position: pos,
                             map: map,
-                            icon: 'https://maps.gstatic.com/intl/en_us/mapfiles/markers2/measle_blue.png'
+                            icon: 'images/track-dot-blue.png'
                         });
 
                     }, function() {
