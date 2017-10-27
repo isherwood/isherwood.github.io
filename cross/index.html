@@ -75,6 +75,7 @@
                 ];
 
                 var crossPropertyOutline = new google.maps.Polygon({
+                    map: map,
                     paths: crossPropertyCoords,
                     strokeColor: '#ffffff',
                     strokeOpacity: 0.5,
@@ -82,8 +83,6 @@
                     fillColor: '#ffffff',
                     fillOpacity: 0.05
                 });
-
-                crossPropertyOutline.setMap(map);
 
                 var twoTrackRoadCoords = [{
                     lat: 45.599615,
@@ -125,6 +124,7 @@
                 };
 
                 var twoTrackRoadPath = new google.maps.Polyline({
+                    map: map,
                     path: twoTrackRoadCoords,
                     icons: [{
                         icon: twoTrackRoadSymbol,
@@ -133,8 +133,6 @@
                     }],
                     strokeOpacity: 0
                 });
-
-                twoTrackRoadPath.setMap(map);
 
                 var treeStands = [{
                     hunter: 'Art',
