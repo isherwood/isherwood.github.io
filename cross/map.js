@@ -112,33 +112,36 @@ function initMap() {
 
     var treeStands = [
         {
-            // southwest river, wet side (south meadow)
-            pos: {
-                lat: 45.596714,
-                lng: -93.639099
-            },
-            title: '2'
-        }, {
-            // south-central river, dry side (ladder)
-            pos: {
-                lat: 45.597295,
-                lng: -93.637415
-            },
-            title: '3'
-        }, {
-            // northwest river, dry side
-            pos: {
-                lat: 45.599261,
-                lng: -93.639854
-            },
-            title: '4'
-        }, {
             // north central woods
             pos: {
                 lat: 45.599802,
                 lng: -93.638951
             },
-            title: '1'
+            title: 'Stand 1'
+        },
+        {
+            // northwest river, dry side
+            pos: {
+                lat: 45.599261,
+                lng: -93.639854
+            },
+            title: 'Stand 2'
+        },
+        {
+            // south-central river, dry side (ladder)
+            pos: {
+                lat: 45.597295,
+                lng: -93.637415
+            },
+            title: 'Stand 3'
+        },
+        {
+            // southwest river, wet side (south meadow)
+            pos: {
+                lat: 45.596714,
+                lng: -93.639099
+            },
+            title: 'Stand 4'
         }
     ];
 
