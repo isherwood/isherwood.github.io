@@ -112,21 +112,14 @@ function initMap() {
 
     var treeStands = [
         {
-            hunter: 'Art',
-            pos: {
-                lat: 45.598507,
-                lng: -93.638822
-            },
-            title: '1'
-        }, {
-            hunter: 'Art',
+            // southwest river, wet side (south meadow)
             pos: {
                 lat: 45.596714,
                 lng: -93.639099
             },
             title: '2'
         }, {
-            hunter: 'Art',
+            // south-central river, dry side (ladder)
             pos: {
                 lat: 45.597295,
                 lng: -93.637415
@@ -134,20 +127,18 @@ function initMap() {
             title: '3'
         }, {
             // northwest river, dry side
-            hunter: 'Clint',
             pos: {
-                lat: 45.599194,
-                lng: -93.639991
+                lat: 45.599398,
+                lng: -93.639875
             },
             title: '4'
         }, {
-            // southwest river, wet side
-            hunter: 'Clint',
+            // north central woods
             pos: {
                 lat: 45.599802,
                 lng: -93.638951
             },
-            title: '5'
+            title: '1'
         }
     ];
 
@@ -157,10 +148,6 @@ function initMap() {
             map: map,
             icon: 'images/tree-stand-icon-blue.png',
             title: i.title
-        });
-        
-        google.maps.event.addListener(stand, 'click', function() {
-            infowindow.open(map, marker);
         });
     });
 
