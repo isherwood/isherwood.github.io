@@ -128,8 +128,8 @@ function initMap() {
         }, {
             // northwest river, dry side
             pos: {
-                lat: 45.599398,
-                lng: -93.639875
+                lat: 45.599261,
+                lng: -93.639854
             },
             title: '4'
         }, {
