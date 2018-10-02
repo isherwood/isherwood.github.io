@@ -58,37 +58,39 @@ function initMap() {
         fillOpacity: 0.05
     });
 
-    var twoTrackRoadCoords = [{
-        lat: 45.599615,
-        lng: -93.636313
+    var twoTrackRoadCoords = [
+        {
+            lat: 45.599615,
+            lng: -93.636313
         }, {
-        lat: 45.599962,
-        lng: -93.636770
+            lat: 45.599962,
+            lng: -93.636770
         }, {
-        lat: 45.600031,
-        lng: -93.636971
+            lat: 45.600031,
+            lng: -93.636971
         }, {
-        lat: 45.600074,
-        lng: -93.637167
+            lat: 45.600074,
+            lng: -93.637167
         }, {
-        lat: 45.600093,
-        lng: -93.637340
+            lat: 45.600093,
+            lng: -93.637340
         }, {
-        lat: 45.600066,
-        lng: -93.637635
+            lat: 45.600066,
+            lng: -93.637635
         }, {
-        lat: 45.599999,
-        lng: -93.637909
+            lat: 45.599999,
+            lng: -93.637909
         }, {
-        lat: 45.599643,
-        lng: -93.638421
+            lat: 45.599643,
+            lng: -93.638421
         }, {
-        lat: 45.599422,
-        lng: -93.638785
+            lat: 45.599422,
+            lng: -93.638785
         }, {
-        lat: 45.599330,
-        lng: -93.638860
-        }];
+            lat: 45.599330,
+            lng: -93.638860
+        }
+    ];
 
     var twoTrackRoadSymbol = {
         path: 'M 0,-1 0,1',
@@ -128,12 +130,14 @@ function initMap() {
                 lng: -93.637415
             }
         }, {
+            // northwest river, dry side
             hunter: 'Clint',
             pos: {
-                lat: 45.5991944,
-                lng: -093.6390833
+                lat: 45.599315,
+                lng: -93.640013
             }
         }, {
+            // southwest river, wet side
             hunter: 'Clint',
             pos: {
                 lat: 45.599802,
