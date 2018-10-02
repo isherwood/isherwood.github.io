@@ -174,13 +174,13 @@ function initMap() {
         }
         }];
 
-    cameras.forEach(function (i) {
-        stand = new google.maps.Marker({
-            position: i.pos,
-            map: map,
-            icon: 'images/camera-icon-green.png'
-        });
-    });
+//     cameras.forEach(function (i) {
+//         stand = new google.maps.Marker({
+//             position: i.pos,
+//             map: map,
+//             icon: 'images/camera-icon-green.png'
+//         });
+//     });
 }
 
 function setUserPosition() {
