@@ -25,7 +25,7 @@ function initMap() {
         dropBreadcrumb();
     }, 30000);
 
-    var crossPropertyCoords = [
+    var propertyCoords = [
             // northeast
         {
             lat: 45.60023204541853,
@@ -48,9 +48,9 @@ function initMap() {
             }
         ];
 
-    var crossPropertyOutline = new google.maps.Polygon({
+    var propertyOutline = new google.maps.Polygon({
         map: map,
-        paths: crossPropertyCoords,
+        paths: propertyCoords,
         strokeColor: '#ffffff',
         strokeOpacity: 0.5,
         strokeWeight: 2,
