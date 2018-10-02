@@ -116,33 +116,38 @@ function initMap() {
             pos: {
                 lat: 45.598507,
                 lng: -93.638822
-            }
+            },
+            title: '1'
         }, {
             hunter: 'Art',
             pos: {
                 lat: 45.596714,
                 lng: -93.639099
-            }
+            },
+            title: '2'
         }, {
             hunter: 'Art',
             pos: {
                 lat: 45.597295,
                 lng: -93.637415
-            }
+            },
+            title: '3'
         }, {
             // northwest river, dry side
             hunter: 'Clint',
             pos: {
-                lat: 45.599315,
-                lng: -93.640013
-            }
+                lat: 45.599194,
+                lng: -93.639991
+            },
+            title: '4'
         }, {
             // southwest river, wet side
             hunter: 'Clint',
             pos: {
                 lat: 45.599802,
                 lng: -93.638951
-            }
+            },
+            title: '5'
         }
     ];
 
@@ -150,7 +155,12 @@ function initMap() {
         stand = new google.maps.Marker({
             position: i.pos,
             map: map,
-            icon: 'images/tree-stand-icon-blue.png'
+            icon: 'images/tree-stand-icon-blue.png',
+            title: i.title
+        });
+        
+        google.maps.event.addListener(stand, 'click', function() {
+            infowindow.open(map, marker);
         });
     });
 
