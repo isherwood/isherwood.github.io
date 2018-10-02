@@ -108,37 +108,39 @@ function initMap() {
         strokeOpacity: 0
     });
 
-    var treeStands = [{
-        hunter: 'Art',
-        pos: {
-            lat: 45.598507,
-            lng: -93.638822
-        }
+    var treeStands = [
+        {
+            hunter: 'Art',
+            pos: {
+                lat: 45.598507,
+                lng: -93.638822
+            }
         }, {
-        hunter: 'Art',
-        pos: {
-            lat: 45.596714,
-            lng: -93.639099
-        }
+            hunter: 'Art',
+            pos: {
+                lat: 45.596714,
+                lng: -93.639099
+            }
         }, {
-        hunter: 'Art',
-        pos: {
-            lat: 45.597295,
-            lng: -93.637415
-        }
+            hunter: 'Art',
+            pos: {
+                lat: 45.597295,
+                lng: -93.637415
+            }
         }, {
-        hunter: 'Matt',
-        pos: {
-            lat: 45.598656,
-            lng: -93.636763
-        }
+            hunter: 'Clint',
+            pos: {
+                lat: 45.5991944,
+                lng: -093.6390833
+            }
         }, {
-        hunter: 'Clint',
-        pos: {
-            lat: 45.599802,
-            lng: -93.638951
+            hunter: 'Clint',
+            pos: {
+                lat: 45.599802,
+                lng: -93.638951
+            }
         }
-        }];
+    ];
 
     treeStands.forEach(function (i) {
         stand = new google.maps.Marker({
@@ -148,31 +150,33 @@ function initMap() {
         });
     });
 
-    var cameras = [{
-        // north-central woods
-        pos: {
-            lat: 45.599588,
-            lng: -93.639768
-        }
+    var cameras = [
+        {
+            // north-central woods
+            pos: {
+                lat: 45.599588,
+                lng: -93.639768
+            }
         }, {
-        // northwest woods
-        pos: {
-            lat: 45.598567,
-            lng: -93.640062
-        }
+            // northwest woods
+            pos: {
+                lat: 45.598567,
+                lng: -93.640062
+            }
         }, {
-        // southwest meadow
-        pos: {
-            lat: 45.596820,
-            lng: -93.639388
-        }
+            // southwest meadow
+            pos: {
+                lat: 45.596820,
+                lng: -93.639388
+            }
         }, {
-        // south-central river
-        pos: {
-            lat: 45.597254,
-            lng: -93.637563
+            // south-central river
+            pos: {
+                lat: 45.597254,
+                lng: -93.637563
+            }
         }
-        }];
+    ];
 
 //     cameras.forEach(function (i) {
 //         stand = new google.maps.Marker({
