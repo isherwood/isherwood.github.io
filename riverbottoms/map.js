@@ -1,7 +1,16 @@
 var map, infoWindow, userMarker;
 
+// show the directions icon if the user agent has location
+if (navigator.geolocation) {
+    // document.getElementById('directions_icon').style.display = 'block';
+}
+
+// initialize the map
 function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
+    var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+
+    var map = new google.maps.Map(document.getElementById('map'), {
         center: {
             lat: 45.598284,
             lng: -93.637643
@@ -30,23 +39,23 @@ function initMap() {
         {
             lat: 45.60023204541853,
             lng: -93.6355266601002
-            },
+    	},
             // southeast
         {
             lat: 45.5965574726782,
             lng: -93.63567686380502
-            },
+    	},
             // southwest
         {
             lat: 45.596425161049446,
             lng: -93.64065504373718
-            },
+    	},
             // northwest
         {
             lat: 45.60007534613013,
             lng: -93.64054775537687
-            }
-        ];
+    	}
+    ];
 
     var propertyOutline = new google.maps.Polygon({
         map: map,

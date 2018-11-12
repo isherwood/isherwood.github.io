@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title>Cross Property Map</title>
+        <title>Riverbottoms Property Map</title>
 
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <meta charset="utf-8">
@@ -18,12 +18,33 @@
             #map {
                 height: 100%;
             }
+            #directions_icon {
+                display: none;
+                background: none rgb(255, 255, 255);
+                margin: 10px;
+                position: absolute;
+                cursor: pointer;
+                border-radius: 2px;
+                height: 40px;
+                width: 40px;
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+                overflow: hidden;
+                top: 0px;
+                right: 50px;
+            }
+            #directions_icon img {
+                width: 20px;
+                margin: 12px 8px;
+            }
 
         </style>
     </head>
 
     <body>
         <div id="map"></div>
+        <div id="directions_icon" title="Get directions to Riverbottoms">
+           <img src="images/route-icon.svg" alt="route icon" />
+        </div>
 
         <script src="map.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMzI3Y40vNrzA_r1k9ariIAcr-B1W1HLA&callback=initMap" async defer></script>
