@@ -1,9 +1,23 @@
 var map, infoWindow, userMarker;
 
-// show the directions icon if the user agent has location
-if (navigator.geolocation) {
-    // document.getElementById('directions_icon').style.display = 'block';
+// show directions from user's location
+function showDirections(directionsService, directionsDisplay, currentPos) {
+	var dest = new google.maps.LatLng(45.599447, -93.635583);
+	
+	var request = {
+		origin: currentPos,
+		destination: dest,
+		travelMode: google.maps.TravelMode.DRIVING
+	};
+  
+	directionsService.route(request, function(result, status) {
+		if (status == 'OK') {
+			directionsDisplay.setDirections(result);
+		}
+	});
 }
+
+document.getElementById('directions_btn').addEventListener('click', showDirections);
 
 // initialize the map
 function initMap() {
@@ -20,6 +34,27 @@ function initMap() {
         scaleControl: true,
         mapTypeControl: false
     });
+	
+	directionsDisplay.setMap(map);
+	
+	if (navigator.geolocation) {
+		navigator.geolocation.getCurrentPosition(function(position) {
+			var currentPos = {
+			  lat: position.coords.latitude,
+			  lng: position.coords.longitude
+			};
+			
+			document.getElementById('directions_btn').style.display = 'block';
+			document.getElementById('directions_btn').addEventListener('click', function() {
+				showDirections(directionsService, directionsDisplay, currentPos);
+			});
+		}, function() {
+			handleLocationError(true, markerme);
+		});
+    } else {
+		// Browser doesn't support Geolocation
+		window.alert('Geolocation is not supported');
+    }
 
     infoWindow = new google.maps.InfoWindow;
 
