@@ -6,6 +6,8 @@
 
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <meta charset="utf-8">
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
         <style>
             html,
@@ -18,23 +20,33 @@
             #map {
                 height: 100%;
             }
-            #directions_btn {
-                display: none;
+            .feature-btn {
                 background: none rgb(255, 255, 255);
                 margin: 10px;
                 position: absolute;
+				right: 0;
                 cursor: pointer;
                 border-radius: 2px;
                 height: 40px;
                 width: 40px;
                 box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
                 overflow: hidden;
-                top: 0px;
-                right: 50px;
             }
-            #directions_btn img {
-                width: 20px;
-                margin: 12px 8px;
+            .feature-btn i {
+                font-size: 20px;
+				margin: 10px 8px;
+				color: #000;
+				opacity: .6;
+            }
+			.feature-btn:hover i {
+				opacity: 1;
+            }
+			#map_btn {
+				top: 50px;
+			}
+			#directions_btn {
+                display: none;
+                top: 100px;
             }
 
         </style>
@@ -42,8 +54,10 @@
 
     <body>
         <div id="map"></div>
-        <div id="directions_btn" title="Get directions to Riverbottoms">
-           <img src="images/route-icon.svg" alt="route icon" />
+		<a id="map_btn" class="feature-btn" href="https://www.google.com/maps/place/3705+110th+Ave,+Princeton,+MN+55371/@45.5987378,-93.6377398,660m/data=!3m1!1e3!4m5!3m4!1s0x52b39cec9e32fda1:0x334ca40a7bba8570!8m2!3d45.5983107!4d-93.6380824" title="Open in Google Maps"><i class="far fa-map"></i></a>
+		
+        <div id="directions_btn" class="feature-btn" title="Show route to Riverbottoms">
+           <i class="fa fa-route"></i>
         </div>
 
         <script src="map.js"></script>
