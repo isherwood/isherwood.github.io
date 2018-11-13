@@ -1,0 +1,38 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+}
+.feature-btn {
+    background: none rgb(255, 255, 255);
+    margin: 10px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    height: 40px;
+    width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    overflow: hidden;
+}
+.feature-btn i {
+    font-size: 20px;
+    margin: 10px 8px;
+    color: #000;
+    opacity: .6;
+}
+.feature-btn:hover i {
+    opacity: 1;
+}
+#map_btn {
+    top: 50px;
+}
+#directions_btn, #return_btn {
+    display: none;
+    top: 100px;
+}

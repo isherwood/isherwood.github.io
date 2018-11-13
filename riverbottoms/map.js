@@ -296,3 +296,13 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
 }
+
+jQuery(function($) {
+    $('.feature-btn.toggleable').click(function() {
+        $('.feature-btn.toggleable').toggle();
+    });
+    
+    $('#return_btn').click(function() {
+        location.reload();
+    });
+});
