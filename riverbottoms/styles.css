@@ -19,12 +19,16 @@ body {
     width: 40px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
     overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 20px;
 }
 .feature-btn i {
     font-size: 20px;
-    margin: 10px 8px;
     color: #000;
     opacity: .6;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .feature-btn:hover i {
     opacity: 1;
