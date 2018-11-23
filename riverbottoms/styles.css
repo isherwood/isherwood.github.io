@@ -36,7 +36,10 @@ body {
 #map_btn {
     top: 50px;
 }
+#sat_view_btn {
+    top: 100px;
+}
 #directions_btn, #return_btn {
     display: none;
-    top: 100px;
+    top: 150px;
 }
