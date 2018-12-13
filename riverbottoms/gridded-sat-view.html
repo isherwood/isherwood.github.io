@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Riverbottoms Property Map</title>
+
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+		
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+        
+        <style>
+            body {
+                background: #000;
+                text-align: center;
+            }
+            .sat-view {
+                width: auto; 
+                height: 100vh;
+                cursor: zoom-in; 
+            }
+            .sat-view.full-size {
+                height: auto;
+                cursor: zoom-out;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="index.html" id="back_btn" class="feature-btn toggleable" title="Return to property overview">
+           <i class="fa fa-arrow-left"></i>
+        </a>
+        
+        <img class="sat-view" src="images/gridded-sat-view.jpg">
+        
+        <script>
+        $('.sat-view').click(function() {
+            $(this).toggleClass('full-size');
+        });
+        </script>
+    </body>
+
+</html>
