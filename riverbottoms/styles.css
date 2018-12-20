@@ -22,6 +22,7 @@ body {
     text-align: center;
     box-sizing: border-box;
     padding-top: 20px;
+	z-index: 90;
 }
 .feature-btn i {
     font-size: 20px;
