@@ -176,7 +176,7 @@ function initMap() {
 	fillColor: '#ef8a0e',
         fillOpacity: 1,
         scale: 0.1,
-	// anchor: new google.maps.Point( 200,175 )
+	anchor: new google.maps.Point( 200,0 )
     }
 	    
     bridge = new google.maps.Polyline({
