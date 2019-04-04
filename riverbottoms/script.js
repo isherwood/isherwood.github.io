@@ -290,7 +290,7 @@ function initMap() {
 			    repeat: '5px'
 			}];
 		}
-	}
+	});
 }
 
 function setUserPosition() {
