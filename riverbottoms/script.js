@@ -165,9 +165,9 @@ function initMap() {
     ];
 	    
     var bridgeSymbol = {
-	    path: 'M -2,0 2,0',
-	    strokeColor: '#8c7f69',
-	    strokeOpacity: .75,
+	    path: 'M -1,0 1,0',
+	    strokeColor: '#ef8a0e',
+	    strokeOpacity: 1,
 	    strokeWeight: 3
 	  };
 	    
