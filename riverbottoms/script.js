@@ -161,7 +161,8 @@ function initMap() {
 	    }, {
 		    lat: 45.597013,
 		    lng: -93.638323
-	    };
+	    }
+    ];
 	    
     let bridgeSymbol = {
 	    path: 'M -2,0 2,0',
