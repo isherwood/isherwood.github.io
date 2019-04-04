@@ -176,18 +176,17 @@ function initMap() {
 	fillColor: '#ef8a0e',
         fillOpacity: 1,
         scale: 0.1,
-	anchor: new google.maps.Point( 200,175 )
+	// anchor: new google.maps.Point( 200,175 )
     }
 	    
     bridge = new google.maps.Polyline({
-        map: map,
-        path: bridgeCoords,
-        icons: [{
-            icon: bridgeSymbol,
-            offset: '0',
-            repeat: '5px'
-            }],
-        strokeOpacity: 0
+	map: map,
+	path: bridgeCoords,
+	icons: [{
+	    icon: bridgeIcon,
+	    repeat: 0
+	}],
+	strokeOpacity: 0
     });
 
     var treeStands = [
