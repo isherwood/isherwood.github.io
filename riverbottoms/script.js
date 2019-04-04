@@ -282,7 +282,7 @@ function initMap() {
 		// remove the 
 		bridge.setMap(null);
 				
-		if (zoom < 20) {
+		if (zoom < 16) {
 			bridge = new google.maps.Polyline({
 				map: map,
 				path: bridgeCoords,
@@ -304,6 +304,8 @@ function initMap() {
 				strokeOpacity: 0
 			    });
 		}
+		
+		bridge.setMap(map);
 	});
 }
 
