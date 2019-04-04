@@ -154,7 +154,7 @@ function initMap() {
         strokeOpacity: 0
     });
 	
-    let bridgeCoords = [
+    var bridgeCoords = [
 	    {
 		    lat: 45.597086,
 		    lng: -93.638329
@@ -164,13 +164,13 @@ function initMap() {
 	    }
     ];
 	    
-    let bridgeSymbol = {
+    var bridgeSymbol = {
 	    path: 'M -2,0 2,0',
 	    strokeColor: '#8c7f69',
 	    strokeWeight: 3
 	  };
 	    
-    let bridge = new google.maps.Polyline({
+    var bridge = new google.maps.Polyline({
         map: map,
         path: bridgeCoords,
         icons: [{
