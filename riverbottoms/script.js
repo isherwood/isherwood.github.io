@@ -153,6 +153,32 @@ function initMap() {
             }],
         strokeOpacity: 0
     });
+	
+    let bridgeCoords = [
+	    {
+		    lat: 45.597086,
+		    lng: -93.638329
+	    }, {
+		    lat: 45.597013,
+		    lng: -93.638323
+	    };
+	    
+    let bridgeSymbol = {
+	    path: 'M -2,0 2,0',
+	    strokeColor: '#8c7f69',
+	    strokeWeight: 3
+	  };
+	    
+    let bridge = new google.maps.Polyline({
+        map: map,
+        path: bridgeCoords,
+        icons: [{
+            icon: bridgeSymbol,
+            offset: '0',
+            repeat: '20px'
+            }],
+        strokeOpacity: 0
+    });
 
     var treeStands = [
         {
