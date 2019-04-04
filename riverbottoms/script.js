@@ -175,7 +175,8 @@ function initMap() {
 	path: 'M20 81 c0 -22 -5 -41 -12 -43 -9 -3 -7 -10 6 -24 14 -13 21 -15 24 -6 5 17 159 17 164 0 3 -9 10 -7 24 6 13 14 15 21 6 24 -7 2 -12 21 -12 43 0 21 -4 39 -10 39 -5 0 -10 -4 -10 -8 0 -13 -47 -32 -80 -32 -33 0 -80 19 -80 32 0 4 -4 8 -10 8 -5 0 -10 -18 -10 -39z m48 -19 c-5 -27 -28 -26 -28 2 0 19 4 24 15 19 9 -3 15 -12 13 -21z m132 3 c0 -28 -17 -34 -27 -9 -3 9 0 20 8 25 19 12 19 12 19 -16z m-100 -10 c0 -8 -4 -15 -10 -15 -5 0 -10 7 -10 15 0 8 5 15 10 15 6 0 10 -7 10 -15z m26 -12 c-10 -10 -19 5 -10 18 6 11 8 11 12 0 2 -7 1 -15 -2 -18z m34 12 c0 -8 -4 -15 -10 -15 -5 0 -10 7 -10 15 0 8 5 15 10 15 6 0 10 -7 10 -15z',
 	fillColor: '#ef8a0e',
         fillOpacity: 1,
-        scale: .1
+        scale: 0.1,
+	anchor: new google.maps.Point( 200,175 )
     }
 	    
     bridge = new google.maps.Polyline({
@@ -283,7 +284,7 @@ function initMap() {
 		// remove the 
 		bridge.setMap(null);
 				
-		if (zoom < 16) {
+		if (zoom < 18) {
 			bridge = new google.maps.Polyline({
 				map: map,
 				path: bridgeCoords,
