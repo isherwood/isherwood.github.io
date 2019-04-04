@@ -1,4 +1,4 @@
-var map, infoWindow, userMarker;
+var map, infoWindow, userMarker, bridge;
 
 // show directions from user's location
 function showDirections(directionsService, directionsDisplay, currentPos) {
@@ -177,7 +177,7 @@ function initMap() {
 	strokeOpacity: 1
     }
 	    
-    var bridge = new google.maps.Polyline({
+    bridge = new google.maps.Polyline({
         map: map,
         path: bridgeCoords,
         icons: [{
@@ -279,16 +279,30 @@ function initMap() {
 	google.maps.event.addListener(map, 'zoom_changed', function() {
 		let zoom = map.getZoom();
 		
+		// remove the 
+		bridge.setMap(null);
+				
 		if (zoom < 20) {
-			bridge.icons = [{
-			    icon: bridgeIcon,
-			    repeat: 0
-		    	}];
+			bridge = new google.maps.Polyline({
+				map: map,
+				path: bridgeCoords,
+				icons: [{
+				    icon: bridgeIcon,
+				    repeat: 0
+				}],
+				strokeOpacity: 0
+			    });
 		} else {
-			bridge.icons = [{
-			    icon: bridgeSymbol,
-			    repeat: '5px'
-			}];
+			bridge = new google.maps.Polyline({
+				map: map,
+				path: bridgeCoords,
+				icons: [{
+				    icon: bridgeSymbol,
+				    offset: '0',
+				    repeat: '5px'
+				    }],
+				strokeOpacity: 0
+			    });
 		}
 	});
 }
