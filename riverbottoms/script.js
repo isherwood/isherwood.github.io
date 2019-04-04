@@ -176,7 +176,7 @@ function initMap() {
         icons: [{
             icon: bridgeSymbol,
             offset: '0',
-            repeat: '20px'
+            repeat: '5px'
             }],
         strokeOpacity: 0
     });
@@ -213,6 +213,14 @@ function initMap() {
                 lng: -93.639099
             },
             title: 'Stand 4'
+        },
+        {
+            // northwest river, wet side
+            pos: {
+                lat: 45.598722,
+                lng: -93.640116
+            },
+            title: 'Stand 5'
         }
     ];
 
