@@ -179,7 +179,8 @@ function initMap() {
             offset: '0',
             repeat: '5px'
             }],
-        strokeOpacity: 0
+        strokeOpacity: 0,
+	title: 'Footbridge'
     });
 
     var treeStands = [
