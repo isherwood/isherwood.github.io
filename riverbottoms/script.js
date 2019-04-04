@@ -167,6 +167,7 @@ function initMap() {
     var bridgeSymbol = {
 	    path: 'M -2,0 2,0',
 	    strokeColor: '#8c7f69',
+	    strokeOpacity: .75,
 	    strokeWeight: 3
 	  };
 	    
