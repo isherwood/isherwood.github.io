@@ -104,8 +104,8 @@ function initMap() {
 
     var twoTrackRoadCoords = [
         {
-            lat: 45.599615,
-            lng: -93.636313
+            lat: 45.599682,
+            lng: -93.636275
         }, {
             lat: 45.599962,
             lng: -93.636770
