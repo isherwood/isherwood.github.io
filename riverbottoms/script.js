@@ -227,6 +227,7 @@ function initMap() {
 				lng: -93.639550
 			},
 			title: 'Five Spot Stand'
+		}
     ];
 
     treeStands.forEach(function (i) {
