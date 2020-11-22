@@ -192,88 +192,65 @@ function initMap() {
 	strokeOpacity: 0
     });
 
-    var treeStands = [
+    var locations = [
         {
             pos: {
-                lat: 45.599261,
-                lng: -93.639854
+                lat: 45.599151,
+                lng: -93.639444
             },
-            title: 'Clint\'s Spot'
+            title: 'Clint\'s Portable Stand',
+			icon: 'images/tree-stand-icon-blue.png'
         },
         {
             pos: {
-                lat: 45.599808,
-                lng: -93.640343
+                lat: 45.599224,
+                lng: -93.640273
             },
-            title: 'Deuce Stand'
+            title: 'Deuce Platform Stand',
+			icon: 'images/tree-stand-icon-blue.png'
         },
         {
             pos: {
                 lat: 45.599613,
                 lng: -93.637992
             },
-            title: 'Ladder Stand'
+            title: 'Ladder Portable Stand',
+			icon: 'images/tree-stand-icon-blue.png'
         },
         {
             pos: {
                 lat: 45.597234,
                 lng:  -93.638751
             },
-            title: 'Penthouse'
+            title: 'Penthouse Box Stand',
+			icon: 'images/platform-stand-blue.png'
         },
 		{
 			pos: {
 				lat: 45.596825, 
 				lng: -93.639550
 			},
-			title: 'Five Spot Stand'
+			title: 'Five Spot Platform Stand',
+			icon: 'images/tree-stand-icon-blue.png'
+		},
+		{
+			pos: {
+				lat: 45.596825, 
+				lng: -93.639550
+			},
+			title: 'Shooting Bench',
+			icon: 'images/rifle-shooter-orange.png'
 		}
     ];
 
-    treeStands.forEach(function (i) {
+    locations.forEach(function (i) {
         stand = new google.maps.Marker({
             position: i.pos,
             map: map,
-            icon: 'images/tree-stand-icon-blue.png',
+            icon: i.icon,
             title: i.title
         });
     });
-
-    var cameras = [
-        {
-            // north-central woods
-            pos: {
-                lat: 45.599588,
-                lng: -93.639768
-            }
-        }, {
-            // northwest woods
-            pos: {
-                lat: 45.598567,
-                lng: -93.640062
-            }
-        }, {
-            // southwest meadow
-            pos: {
-                lat: 45.596820,
-                lng: -93.639388
-            }
-        }, {
-            // south-central river
-            pos: {
-                lat: 45.597254,
-                lng: -93.637563
-            }
-        }
-    ];
-
-//     cameras.forEach(function (i) {
-//         stand = new google.maps.Marker({
-//             position: i.pos,
-//             map: map,
-//             icon: 'images/camera-icon-green.png'
-//         });
-//     });
 	
 	google.maps.event.addListener(map, 'zoom_changed', function() {
 		let zoom = map.getZoom();
