@@ -243,10 +243,18 @@ function initMap() {
 		},
 		{
 			pos: {
-				lat: 45.599370
+				lat: 45.599370,
 				lng: -93.638743
 			},
 			title: '225 Yard Target',
+			icon: 'images/target-orange.png'
+		},
+		{
+			pos: {
+				lat: 45.599441,
+				lng: -93.639504
+			},
+			title: '300 Yard Target',
 			icon: 'images/target-orange.png'
 		}
     ];
