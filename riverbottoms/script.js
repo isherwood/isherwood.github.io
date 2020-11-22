@@ -260,7 +260,7 @@ function initMap() {
             map: map,
             icon: i.icon,
             title: i.title,
-			anchor: new maps.Point(12, -12)
+			anchor: new google.maps.Point(12, -12)
         });
     });
 
