@@ -235,11 +235,19 @@ function initMap() {
 		},
 		{
 			pos: {
-				lat: 45.596825, 
-				lng: -93.639550
+				lat: 45.599116,
+				lng: -93.636003
 			},
 			title: 'Shooting Bench',
 			icon: 'images/rifle-shooter-orange.png'
+		},
+		{
+			pos: {
+				lat: 45.599370
+				lng: -93.638743
+			},
+			title: '225 Yard Target',
+			icon: 'images/target-orange.png'
 		}
     ];
 
