@@ -202,15 +202,15 @@ function initMap() {
         },
         {
             pos: {
-                lat: 45.597295,
-                lng: -93.637415
+                lat: 45.599808,
+                lng: -93.640343
             },
             title: 'Deuce Stand'
         },
         {
             pos: {
-                lat: 45.597295,
-                lng: -93.637415
+                lat: 45.599613,
+                lng: -93.637992
             },
             title: 'Ladder Stand'
         },
