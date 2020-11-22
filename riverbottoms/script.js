@@ -190,8 +190,8 @@ function initMap() {
 
     var locations = [{
             pos: {
-                lat: 45.599151,
-                lng: -93.639444
+                lat: 45.599339,
+                lng: -93.639587
             },
             title: 'Clint\'s Portable Stand',
             icon: 'images/tree-stand-blue.png'
@@ -214,8 +214,8 @@ function initMap() {
         },
         {
             pos: {
-                lat: 45.597234,
-                lng: -93.638751
+                lat: 45.597388,
+                lng: -93.638744
             },
             title: 'Penthouse Box Stand',
             icon: 'images/box-stand-blue.png'
@@ -258,10 +258,13 @@ function initMap() {
         stand = new google.maps.Marker({
             position: i.pos,
             map: map,
-            icon: i.icon,
-            title: i.title,
-			anchor: new google.maps.Point(12, -12)
+            icon: {
+				url: i.icon,
+			    anchor: new google.maps.Point(0, 12)
+			},
+            title: i.title
         });
+		console.log(stand);
     });
 
     google.maps.event.addListener(map, 'zoom_changed', function() {
