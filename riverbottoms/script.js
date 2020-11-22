@@ -239,7 +239,7 @@ function initMap() {
 				lng: -93.636003
 			},
 			title: 'Shooting Bench',
-			icon: 'images/rifle-shooter-orange.png'
+			icon: 'images/sight-orange.png'
 		},
 		{
 			pos: {
