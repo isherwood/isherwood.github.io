@@ -259,7 +259,8 @@ function initMap() {
             position: i.pos,
             map: map,
             icon: i.icon,
-            title: i.title
+            title: i.title,
+			anchor: new maps.Point(12, -12)
         });
     });
 
