@@ -223,7 +223,7 @@ function initMap() {
                 lng:  -93.638751
             },
             title: 'Penthouse Box Stand',
-			icon: 'images/platform-stand-blue.png'
+			icon: 'images/box-stand-blue.png'
         },
 		{
 			pos: {
@@ -231,7 +231,7 @@ function initMap() {
 				lng: -93.639550
 			},
 			title: 'Five Spot Platform Stand',
-			icon: 'images/tree-stand-icon-blue.png'
+			icon: 'images/tree-stand-blue.png'
 		},
 		{
 			pos: {
