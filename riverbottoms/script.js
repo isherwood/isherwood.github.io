@@ -58,8 +58,8 @@ function initMap() {
 
     infoWindow = new google.maps.InfoWindow;
 
-    setUserPosition();
-    dropBreadcrumb();
+    // setUserPosition();
+    // dropBreadcrumb();
 
     setInterval(function() {
         setUserPosition();
@@ -246,8 +246,8 @@ function initMap() {
         {
             title: '225 Yard Target',
             pos: {
-                lat: 45.59930,
-                lng: -93.63869
+                lat: 45.599370,
+                lng: -93.638743
             },
             icon: 'images/target-orange.png'
         },
@@ -265,7 +265,7 @@ function initMap() {
                 lat: 45.59914,
                 lng: -93.64045
             },
-            icon: 'images/target-orange.png'
+            icon: 'images/camera-green.png'
         }
     ];
 
@@ -332,7 +332,7 @@ function setUserPosition() {
                 userMarker = new google.maps.Marker({
                     position: pos,
                     map: map,
-                    icon: 'images/bowhunter-icon-orange.png'
+                    icon: 'images/bowhunter-orange.png'
                 });
             }, 150);
 
