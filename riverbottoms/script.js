@@ -189,67 +189,82 @@ function initMap() {
     });
 
     var locations = [{
-            pos: {
-                lat: 45.599339,
-                lng: -93.639587
-            },
             title: 'Clint\'s Portable Stand',
-            icon: 'images/tree-stand-blue.png'
-        },
-        {
             pos: {
-                lat: 45.599224,
-                lng: -93.640273
+                lat: 45.59926,
+                lng: -93.63967
             },
-            title: 'Deuce Platform Stand',
+            icon: 'images/tree-stand-blue.png'
+        },{
+            title: 'Old Man Stand',
+            pos: {
+                lat: 45.59993,
+                lng: -93.63896
+            },
             icon: 'images/tree-stand-blue.png'
         },
         {
+            title: 'Deuce Platform Stand',
+            pos: {
+                lat: 45.59924,
+                lng: -93.64014
+            },
+            icon: 'images/tree-stand-blue.png'
+        },
+        {
+            title: 'Ladder Portable Stand',
             pos: {
                 lat: 45.599613,
                 lng: -93.637992
             },
-            title: 'Ladder Portable Stand',
             icon: 'images/tree-stand-blue.png'
         },
         {
+            title: 'Penthouse Box Stand',
             pos: {
                 lat: 45.597388,
                 lng: -93.638744
             },
-            title: 'Penthouse Box Stand',
             icon: 'images/box-stand-blue.png'
         },
         {
-            pos: {
-                lat: 45.596825,
-                lng: -93.639550
-            },
             title: 'Five Spot Platform Stand',
+            pos: {
+                lat: 45.59691,
+                lng: -93.63969
+            },
             icon: 'images/tree-stand-blue.png'
         },
         {
+            title: 'Shooting Bench',
             pos: {
                 lat: 45.599116,
                 lng: -93.636003
             },
-            title: 'Shooting Bench',
             icon: 'images/sight-orange.png'
         },
         {
-            pos: {
-                lat: 45.599370,
-                lng: -93.638743
-            },
             title: '225 Yard Target',
+            pos: {
+                lat: 45.59930,
+                lng: -93.63869
+            },
             icon: 'images/target-orange.png'
         },
         {
-            pos: {
-                lat: 45.599441,
-                lng: -93.639504
-            },
             title: '300 Yard Target',
+            pos: {
+                lat: 45.59947,
+                lng: -93.63951
+            },
+            icon: 'images/target-orange.png'
+        },
+        {
+            title: 'Northwest Corner Trail Cam',
+            pos: {
+                lat: 45.59914,
+                lng: -93.64045
+            },
             icon: 'images/target-orange.png'
         }
     ];
