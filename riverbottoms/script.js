@@ -2,9 +2,9 @@ var map, infoWindow, userMarker, bridge;
 
 // show directions from user's location
 function showDirections(directionsService, directionsDisplay, currentPos) {
-    var dest = new google.maps.LatLng(45.599447, -93.635583);
+    const dest = new google.maps.LatLng(45.599447, -93.635583);
 
-    var request = {
+    const request = {
         origin: currentPos,
         destination: dest,
         travelMode: google.maps.TravelMode.DRIVING
@@ -21,10 +21,10 @@ document.getElementById('directions_btn').addEventListener('click', showDirectio
 
 // initialize the map
 function initMap() {
-    var directionsService = new google.maps.DirectionsService;
-    var directionsDisplay = new google.maps.DirectionsRenderer;
+    let directionsService = new google.maps.DirectionsService;
+    let directionsDisplay = new google.maps.DirectionsRenderer;
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    let map = new google.maps.Map(document.getElementById('map'), {
         center: {
             lat: 45.598284,
             lng: -93.637643
@@ -39,7 +39,7 @@ function initMap() {
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            var currentPos = {
+            const currentPos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
@@ -58,8 +58,8 @@ function initMap() {
 
     infoWindow = new google.maps.InfoWindow;
 
-    // setUserPosition();
-    // dropBreadcrumb();
+    setUserPosition();
+    dropBreadcrumb();
 
     setInterval(function() {
         setUserPosition();
@@ -69,7 +69,7 @@ function initMap() {
         dropBreadcrumb();
     }, 30000);
 
-    var propertyCoords = [
+    const propertyCoords = [
         // northeast
         {
             lat: 45.60023204541853,
@@ -92,7 +92,7 @@ function initMap() {
         }
     ];
 
-    var propertyOutline = new google.maps.Polygon({
+    const propertyOutline = new google.maps.Polygon({
         map: map,
         paths: propertyCoords,
         strokeColor: '#ffffff',
@@ -102,7 +102,7 @@ function initMap() {
         fillOpacity: 0.05
     });
 
-    var twoTrackCoords = [{
+    const twoTrackCoords = [{
         lat: 45.599682,
         lng: -93.636275
     }, {
@@ -137,14 +137,14 @@ function initMap() {
         lng: -93.638860
     }];
 
-    var twoTrackSymbol = {
+    const twoTrackSymbol = {
         path: 'M 0,-1 0,1',
         strokeOpacity: .75,
         strokeColor: '#ffd547',
         scale: 4
     };
 
-    var twoTrackPath = new google.maps.Polyline({
+    const twoTrackPath = new google.maps.Polyline({
         map: map,
         path: twoTrackCoords,
         icons: [{
@@ -154,8 +154,193 @@ function initMap() {
         }],
         strokeOpacity: 0
     });
+	
+	const atvTrailCoords = [{
+		lat: 45.599723,
+		lng: -93.638441
+	}, {
+		lat: 45.599725,
+		lng: -93.638483
+	}, {
+		lat: 45.599773,
+		lng: -93.638647
+	}, {
+		lat: 45.599816,
+		lng: -93.638719
+	}, {
+		lat: 45.599817,
+		lng: -93.638773 
+	}, {
+		lat: 45.599824,
+		lng: -93.638798
+	}, {
+		lat: 45.599848,
+		lng: -93.638814
+	}, {
+		lat: 45.599869,
+		lng: -93.638841
+	}, {
+		lat: 45.599882,
+		lng: -93.638895
+	}, {
+		lat: 45.599900,
+		lng: -93.638923
+	}, {
+		lat: 45.599953,
+		lng: -93.638937
+	}, {
+		lat: 45.600027,
+		lng: -93.638936
+	}, {
+		lat: 45.600084,
+		lng: -93.638996
+	}, {
+		lat: 45.600068,
+		lng: -93.639053
+	}, {
+		lat: 45.600060,
+		lng: -93.639155
+	}, {
+		lat: 45.600059,
+		lng: -93.639224
+	}, {
+		lat: 45.600028,
+		lng: -93.639317
+	}, {
+		lat: 45.600040,
+		lng: -93.639371
+	}, {
+		lat: 45.600005,
+		lng: -93.639446
+	}, {
+		lat: 45.600016,
+		lng: -93.639580
+	}, {
+		lat: 45.600034,
+		lng: -93.639623
+	}, {
+		lat: 45.600029,
+		lng: -93.639694
+	}, {
+		lat: 45.600036,
+		lng: -93.639769
+	}, {
+		lat: 45.600003,
+		lng: -93.639840
+	}, {
+		lat: 45.600000,
+		lng: -93.639871
+	}, {
+		lat: 45.599952,
+		lng: -93.639997
+	}, {
+		lat: 45.599970,
+		lng: -93.640083
+	}, {
+		lat: 45.599962,
+		lng: -93.640185
+	}, {
+		lat: 45.599942,
+		lng: -93.640234
+	}, {
+		lat: 45.599886,
+		lng: -93.640298
+	}, {
+		lat: 45.599814,
+		lng: -93.640427
+	}, {
+		lat: 45.599766,
+		lng: -93.640460
+	}, {
+		lat: 45.599693,
+		lng: -93.640463
+	}, {
+		lat: 45.599623,
+		lng: -93.640454
+	}, {
+		lat: 45.599562,
+		lng: -93.640465
+	}, {
+		lat: 45.599528,
+		lng: -93.640485
+	}, {
+		lat: 45.599469,
+		lng: -93.640460
+	}, {
+		lat: 45.599381,
+		lng: -93.640507
+	}, {
+		lat: 45.599272,
+		lng: -93.640541
+	}, {
+		lat: 45.599216,
+		lng: -93.640520
+	}, {
+		lat: 45.599148,
+		lng: -93.640561
+	}, {
+		lat: 45.599111,
+		lng: -93.640537
+	}, {
+		lat: 45.599110,
+		lng: -93.640476
+	}, {
+		lat: 45.599140,
+		lng: -93.640391
+	}, {
+		lat: 45.599135,
+		lng: -93.640341
+	}, {
+		lat: 45.599140,
+		lng: -93.640245
+	}, {
+		lat: 45.599121,
+		lng: -93.640119
+	}, {
+		lat: 45.599108,
+		lng: -93.639989
+	}, {
+		lat: 45.599106,
+		lng: -93.639785
+	}, {
+		lat: 45.599089,
+		lng: -93.639679
+	}, {
+		lat: 45.599074,
+		lng: -93.639558
+	}, {
+		lat: 45.599139,
+		lng: -93.639502
+	}, {
+		lat: 45.599280,
+		lng: -93.639349
+	}, {
+		lat: 45.599313,
+		lng: -93.639267
+	}, {
+		lat: 45.599345,
+		lng: -93.638958
+	}];
 
-    var bridgeCoords = [{
+    const atvTrailSymbol = {
+        path: 'M 0,-1 0,1',
+        strokeOpacity: .75,
+        strokeColor: '#98958e',
+        scale: 4
+    };
+
+    const atvTrailPath = new google.maps.Polyline({
+        map: map,
+        path: atvTrailCoords,
+        icons: [{
+            icon: atvTrailSymbol,
+            offset: '0',
+            repeat: '20px'
+        }],
+        strokeOpacity: 0
+    });
+
+    const bridgeCoords = [{
         lat: 45.597086,
         lng: -93.638329
     }, {
@@ -163,14 +348,14 @@ function initMap() {
         lng: -93.638323
     }];
 
-    var bridgeSymbol = {
+    const bridgeSymbol = {
         path: 'M -1,0 1,0',
         strokeColor: '#ef8a0e',
         strokeOpacity: 1,
         strokeWeight: 3
     };
 
-    var bridgeIcon = {
+    const bridgeIcon = {
         path: 'M20 81 c0 -22 -5 -41 -12 -43 -9 -3 -7 -10 6 -24 14 -13 21 -15 24 -6 5 17 159 17 164 0 3 -9 10 -7 24 6 13 14 15 21 6 24 -7 2 -12 21 -12 43 0 21 -4 39 -10 39 -5 0 -10 -4 -10 -8 0 -13 -47 -32 -80 -32 -33 0 -80 19 -80 32 0 4 -4 8 -10 8 -5 0 -10 -18 -10 -39z m48 -19 c-5 -27 -28 -26 -28 2 0 19 4 24 15 19 9 -3 15 -12 13 -21z m132 3 c0 -28 -17 -34 -27 -9 -3 9 0 20 8 25 19 12 19 12 19 -16z m-100 -10 c0 -8 -4 -15 -10 -15 -5 0 -10 7 -10 15 0 8 5 15 10 15 6 0 10 -7 10 -15z m26 -12 c-10 -10 -19 5 -10 18 6 11 8 11 12 0 2 -7 1 -15 -2 -18z m34 12 c0 -8 -4 -15 -10 -15 -5 0 -10 7 -10 15 0 8 5 15 10 15 6 0 10 -7 10 -15z',
         fillColor: '#ef8a0e',
         fillOpacity: 1,
@@ -188,7 +373,7 @@ function initMap() {
         strokeOpacity: 0
     });
 
-    var locations = [{
+    const locations = [{
             title: 'Clint\'s Portable Stand',
             pos: {
                 lat: 45.59926,
@@ -262,8 +447,8 @@ function initMap() {
         {
             title: 'Northwest Corner Trail Cam',
             pos: {
-                lat: 45.59914,
-                lng: -93.64045
+                lat: 45.599080,
+                lng: -93.640517
             },
             icon: 'images/camera-green.png'
         }
@@ -279,11 +464,10 @@ function initMap() {
 			},
             title: i.title
         });
-		console.log(stand);
     });
 
     google.maps.event.addListener(map, 'zoom_changed', function() {
-        let zoom = map.getZoom();
+        const zoom = map.getZoom();
 
         // remove the bridge icon
         bridge.setMap(null);
@@ -349,12 +533,12 @@ function dropBreadcrumb() {
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
+            const pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
 
-            var crumb = new google.maps.Marker({
+            const crumb = new google.maps.Marker({
                 position: pos,
                 map: map,
                 icon: 'images/track-dot-blue.png'
