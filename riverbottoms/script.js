@@ -1,4 +1,7 @@
-var map, infoWindow, userMarker, bridge;
+let map;
+let infoWindow;
+let userMarker;
+let bridge;
 
 // show directions from user's location
 function showDirections(directionsService, directionsDisplay, currentPos) {
@@ -21,10 +24,10 @@ document.getElementById('directions_btn').addEventListener('click', showDirectio
 
 // initialize the map
 function initMap() {
-    let directionsService = new google.maps.DirectionsService;
-    let directionsDisplay = new google.maps.DirectionsRenderer;
+    const directionsService = new google.maps.DirectionsService;
+    const directionsDisplay = new google.maps.DirectionsRenderer;
 
-    let map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: {
             lat: 45.598284,
             lng: -93.637643
@@ -58,15 +61,15 @@ function initMap() {
 
     infoWindow = new google.maps.InfoWindow;
 
-    setUserPosition();
-    dropBreadcrumb();
+    setUserPosition(map);
+    dropBreadcrumb(map);
 
     setInterval(function() {
-        setUserPosition();
+        setUserPosition(map);
     }, 10000);
 
     setInterval(function() {
-        dropBreadcrumb();
+        dropBreadcrumb(map);
     }, 30000);
 
     const propertyCoords = [
@@ -509,11 +512,11 @@ function initMap() {
     });
 }
 
-function setUserPosition() {
+function setUserPosition(map) {
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
+            const pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
@@ -539,7 +542,7 @@ function setUserPosition() {
     }
 }
 
-function dropBreadcrumb() {
+function dropBreadcrumb(map) {
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
