@@ -87,8 +87,18 @@ function initMap() {
         },
         // northwest
         {
-            lat: 45.60007534613013,
-            lng: -93.64054775537687
+            lat: 45.600077,
+            lng: -93.64045
+        },
+        // north central
+        {
+            lat: 45.60105,
+            lng: -93.63803
+        },
+        // north notch
+        {
+            lat: 45.60018,
+            lng: -93.63715
         }
     ];
 
@@ -154,7 +164,7 @@ function initMap() {
         }],
         strokeOpacity: 0
     });
-	
+
 	const atvTrailCoords = [{
 		lat: 45.599723,
 		lng: -93.638441
@@ -169,7 +179,7 @@ function initMap() {
 		lng: -93.638719
 	}, {
 		lat: 45.599817,
-		lng: -93.638773 
+		lng: -93.638773
 	}, {
 		lat: 45.599824,
 		lng: -93.638798
