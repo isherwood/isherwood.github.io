@@ -87,13 +87,13 @@ function initMap() {
         },
         // northwest
         {
-            lat: 45.600077,
-            lng: -93.64045
+            lat: 45.600817,
+            lng: -93.640423
         },
         // north central
         {
-            lat: 45.60018,
-            lng: -93.63715
+            lat: 45.601008,
+            lng: -93.637980
         },
         // north notch
         {
