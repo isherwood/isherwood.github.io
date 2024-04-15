@@ -87,8 +87,8 @@ function initMap() {
         },
         // northwest
         {
-            lat: 45.600817,
-            lng: -93.640423
+            lat: 45.600799,
+            lng: -93.640465
         },
         // north central
         {
