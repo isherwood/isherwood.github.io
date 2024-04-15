@@ -97,8 +97,8 @@ function initMap() {
         },
         // north notch
         {
-            lat: 45.60018,
-            lng: -93.63715
+            lat: 45.601006,
+            lng: -93.637929
         }
     ];
 
